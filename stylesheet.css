@@ -3,12 +3,16 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden; /* 横スクロールを防止 */
 }
 
 /* コンテナ */
 .container {
     display: flex;
     height: 100vh;
+    width: 100vw; /* ビューポート全体をカバー */
+    overflow: hidden; /* スクロール防止 */
 }
 
 /* サイドバー */
@@ -21,6 +25,7 @@ body, html {
     position: fixed;         /* 固定表示 */
     top: 0;
     left: 0;
+    overflow-y: auto;        /* 縦スクロールを有効に */
 }
 
 .sidebar h1 {
@@ -96,14 +101,17 @@ body, html {
 
 /* スライダーエリア */
 .slider {
+    margin-left: 250px;  /* サイドバーの幅に合わせてスライダーをずらす */
     flex-grow: 1;
     position: relative;
+    height: 100vh; /* スライダーエリアを全画面に設定 */
+    overflow: hidden;
 }
 
 .slides {
     display: flex;
-    overflow: hidden;
-    height: 100%;
+    transition: 0.5s ease-in-out;
+    width: 300%; /* スライド要素全体の幅を調整 */
 }
 
 .slide {
@@ -133,26 +141,6 @@ body, html {
 /* News セクション */
 .news-section {
     padding: 20px;
+    margin-left: 250px; /* サイドバーの幅に合わせて余白を追加 */
 }
 
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.news-item {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.news-item img {
-    width: 100%;
-    height: auto;
-}
-
-.news-item p {
-    margin: 10px 0;
-    font-size: 16px;
-}
