@@ -15,7 +15,7 @@ body {
 .sidebar {
     width: 250px;
     height: 100vh; /* ビューポートの高さを100% */
-    background-color: rgba(0,0,0,0.6); /* 背景を黒に */
+    background-color: #000; /* 背景を黒に */
     color: white; /* テキストカラーを白に */
     display: flex;
     flex-direction: column;
