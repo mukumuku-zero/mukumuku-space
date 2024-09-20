@@ -75,9 +75,12 @@ body, html {
     position: relative;
 }
 
-.slide img {
-    width: 100%;
-    height: auto;
+@media (max-width: 768px) {
+    .slide img {
+        width: 100%;      /* 画像を親要素の幅に合わせて調整 */
+        height: auto;     /* 縦横比を保ちながら高さを自動調整 */
+        max-width: 100%;  /* 親要素を超えないようにする */
+    }
 }
 
 .caption {
