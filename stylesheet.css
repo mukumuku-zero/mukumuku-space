@@ -126,7 +126,7 @@ body {
 
 .news-item img {
     width: 200px;
-    height: auto;  /* 高さを自動調整 */
+    height: 150px;  /* 高さを自動調整 */
     object-fit: cover;  /* アスペクト比を維持しつつ、要素全体に画像を収める */
     margin-right: 20px;
 }
