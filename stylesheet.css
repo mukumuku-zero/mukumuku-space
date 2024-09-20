@@ -13,19 +13,24 @@ body, html {
 
 /* サイドバー */
 .sidebar {
-    background-color: #111;
-    color: white;
-    width: 250px;
+    background-color: #111;  /* 背景色を黒に設定 */
+    color: white;            /* 文字色を白に設定 */
+    width: 250px;            /* 幅を設定 */
     padding: 20px;
+    height: 100vh;           /* 画面の高さ全体をカバー */
+    position: fixed;         /* 固定表示 */
+    top: 0;
+    left: 0;
 }
 
 .sidebar h1 {
     font-size: 24px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .sidebar nav ul {
-    list-style: none;
+    list-style: none;        /* デフォルトのリストスタイルを削除 */
     padding: 0;
 }
 
@@ -37,24 +42,56 @@ body, html {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s;
 }
 
+.sidebar nav ul li a:hover {
+    color: #007BFF;  /* ホバー時にリンクの色を青に変更 */
+}
+
+/* ボタンのスタイル */
 .contact-buttons {
     margin-top: 20px;
 }
 
 .contact-buttons button {
-    background-color: #007BFF;
+    background-color: #007BFF; /* ボタンの背景色を青に */
     color: white;
     padding: 10px;
     border: none;
     width: 100%;
     margin-bottom: 10px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .contact-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3;  /* ホバー時のボタンの色を濃い青に */
+}
+
+.contact-buttons .line-register {
+    background-color: #00c300;  /* LINE登録ボタンの背景色 */
+}
+
+.contact-buttons .mail-register {
+    background-color: #6c757d;  /* メルマガ登録ボタンの背景色 */
+}
+
+/* アイコンのスタイル */
+.sidebar .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar .social-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.sidebar .social-icons a:hover {
+    color: #007BFF;  /* アイコンホバー時に色を変更 */
 }
 
 /* スライダーエリア */
