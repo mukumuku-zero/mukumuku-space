@@ -101,31 +101,29 @@ body, html {
 
 /* スライダーエリア */
 .slider {
-    margin-left: 250px;  /* サイドバーの幅に合わせてスライダーをずらす */
     flex-grow: 1;
     position: relative;
-    height: 100vh; /* スライダーエリアを全画面に設定 */
+    height: 80vh;  /* スライダーの高さを調整（画面の80%） */
     overflow: hidden;
 }
 
 .slides {
     display: flex;
-    transition: 0.5s ease-in-out;
-    width: 300%; /* スライド要素全体の幅を調整 */
+    height: 100%;  /* スライダー内の要素を全高にフィットさせる */
+    width: 100%;   /* 幅も全体にフィット */
+    transition: transform 0.5s ease-in-out;  /* スライドが滑らかに動く */
 }
 
 .slide {
-    min-width: 100%;
-    transition: 0.5s ease-in-out;
+    min-width: 100%;  /* 各スライドを親要素の幅に合わせる */
+    height: 100%;     /* 各スライドを親要素の高さにフィットさせる */
     position: relative;
 }
 
-@media (max-width: 768px) {
-    .slide img {
-        width: 100%;      /* 画像を親要素の幅に合わせて調整 */
-        height: auto;     /* 縦横比を保ちながら高さを自動調整 */
-        max-width: 100%;  /* 親要素を超えないようにする */
-    }
+.slide img {
+    width: 100%;      /* スライド画像の幅を100%に */
+    height: 100%;     /* 画像の高さをスライダーエリアに合わせる */
+    object-fit: cover; /* 画像のサイズが異なる場合でも、比率を保ちながらカバー */
 }
 
 .caption {
@@ -136,6 +134,7 @@ body, html {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     font-size: 24px;
+    max-width: 80%; /* キャプションの横幅を制限 */
 }
 
 /* News セクション */
@@ -144,3 +143,75 @@ body, html {
     margin-left: 250px; /* サイドバーの幅に合わせて余白を追加 */
 }
 
+/* スマホ・タブレット対応 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative; /* 固定表示を解除し、画面幅に合わせる */
+        padding: 10px;
+    }
+
+    .sidebar h1 {
+        font-size: 20px;
+    }
+
+    .contact-buttons button {
+        font-size: 14px;
+    }
+
+    .slider {
+        height: 60vh; /* 小さい画面ではスライダーの高さを縮小 */
+    }
+
+    .caption {
+        font-size: 18px; /* キャプションの文字サイズを小さめに調整 */
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr; /* スマホでは1列表示に切り替え */
+    }
+}
+
+/* アイコンのスタイル */
+.sidebar .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around; /* アイコンの間に均等なスペースを作る */
+    gap: 10px;                     /* アイコンの間に少しの余白を追加 */
+}
+
+.sidebar .social-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.sidebar .social-icons a:hover {
+    color: #007BFF;  /* アイコンホバー時に色を変更 */
+}
+
+/* サイドバーボタンの調整 */
+.contact-buttons button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* ボタンに角丸を追加 */
+}
+
+.contact-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.contact-buttons .line-register {
+    background-color: #00c300;
+}
+
+.contact-buttons .mail-register {
+    background-color: #6c757d;
+}
