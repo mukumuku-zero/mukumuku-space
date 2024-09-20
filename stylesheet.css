@@ -5,19 +5,25 @@
     box-sizing: border-box;
 }
 
+/* ボディ */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex; /* Flexboxでレイアウトを調整 */
+}
+
 /* 左側固定のサイドバー */
 .sidebar {
     width: 250px;
-    height: 100vh; /* 画面の高さ全体 */
-    position: fixed; /* 固定する */
-    left: 0;
-    top: 0;
-    background-color: #000; /* 背景を黒に */
-    color: white;
-    padding: 20px;
+    height: 100vh; /* ビューポートの高さを100% */
+    background-color: rgba(0,0,0,0.6); /* 背景を黒に */
+    color: white; /* テキストカラーを白に */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* スペースを均等に配置 */
+    padding: 20px;
+    position: fixed; /* 固定表示 */
+    left: 0;
+    top: 0;
 }
 
 .sidebar h1 {
@@ -31,7 +37,7 @@
 }
 
 .sidebar nav ul li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .sidebar nav ul li a {
