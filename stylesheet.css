@@ -15,11 +15,14 @@ body {
     width: 250px;
     background-color: #000;
     color: white;
-    height: 100vh; /* サイドバーを画面全体の高さに */
+    height: 100vh; /* 画面全体の高さに固定 */
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed; /* サイドバーを画面左に固定 */
+    top: 0;
+    left: 0;
 }
 
 .sidebar h1 {
@@ -65,14 +68,15 @@ body {
 }
 
 .content {
-    flex-grow: 1; /* コンテンツ部分が自動的に幅を調整 */
+    margin-left: 270px; /* サイドバーの幅に合わせてマージンを調整 */
     padding: 20px;
-    background-color: #f4f4f4; /* 背景色を薄いグレーに */
+    background-color: #f4f4f4;
 }
 
 .header-image img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* コンテンツの幅に合わせて表示 */
+    height: auto; /* アスペクト比を保持 */
+    max-width: 100%; /* 画像がはみ出さないように調整 */
 }
 
 .news {
