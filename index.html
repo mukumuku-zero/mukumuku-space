@@ -3,52 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Studio - ホームページ</title>
+    <title>Blue Studio サンプル</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#">Blue Studio</a>
+    <div class="container">
+        <!-- 左のメニュー -->
+        <aside class="sidebar">
+            <h1 class="logo">Blue Studio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Rent / Sale</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Magazine</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </nav>
+            <div class="contact-buttons">
+                <button>お問い合わせ</button>
+                <button>LINE 登録</button>
+                <button>メルマガ登録</button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#">サービス</a></li>
-                <li><a href="#">ポートフォリオ</a></li>
-                <li><a href="#">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
+        </aside>
 
-    <section class="hero">
-        <h1>クリエイティブで未来を創る</h1>
-        <p>デザインと技術であなたのビジョンを実現します</p>
-        <a href="#" class="btn">サービスを見る</a>
-    </section>
-
-    <section class="services">
-        <h2>サービス</h2>
-        <div class="service-cards">
-            <div class="service-card">
-                <h3>Webデザイン</h3>
-                <p>美しく機能的なWebデザインを提供します。</p>
+        <!-- スライドショーエリア -->
+        <section class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="slide1.jpg" alt="Slide 1">
+                    <div class="caption">
+                        <h2>ブルースタジオなりわい暮らしシリーズ最新物件</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slide2.jpg" alt="Slide 2">
+                    <div class="caption">
+                        <h2>リライフプラス掲載</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slide3.jpg" alt="Slide 3">
+                    <div class="caption">
+                        <h2>公共事変 - BPM</h2>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>開発</h3>
-                <p>最新の技術を使って、カスタムWebアプリケーションを構築します。</p>
-            </div>
-            <div class="service-card">
-                <h3>マーケティング</h3>
-                <p>あなたのブランドを効果的にプロモーションします。</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>&copy; 2024 Blue Studio. All rights reserved.</p>
-    </footer>
+        <!-- News セクション -->
+        <section class="news-section">
+            <h2>News</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="news1.jpg" alt="News 1">
+                    <p>リライフプラス掲載</p>
+                    <p>2024.09.19</p>
+                </div>
+                <div class="news-item">
+                    <img src="news2.jpg" alt="News 2">
+                    <p>ブルースタジオ設計</p>
+                    <p>2024.09.18</p>
+                </div>
+                <!-- 他のニュースを追加できます -->
+            </div>
+        </section>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
