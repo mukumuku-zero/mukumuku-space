@@ -1,33 +1,28 @@
-/* CSSリセット */
+/* ページ全体のスタイルをリセット */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex; /* Flexboxで全体をレイアウト */
-}
-
+/* 左側固定のサイドバー */
 .sidebar {
     width: 250px;
-    background-color: #000;
+    height: 100vh; /* 画面の高さ全体 */
+    position: fixed; /* 固定する */
+    left: 0;
+    top: 0;
+    background-color: #000; /* 背景を黒に */
     color: white;
-    height: 100vh; /* サイドバーを画面全体の高さに */
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: fixed; /* サイドバーを画面左に固定 */
-    top: 0;
-    left: 0;
 }
 
 .sidebar h1 {
-    margin: 0;
     font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .sidebar nav ul {
@@ -36,12 +31,13 @@ body {
 }
 
 .sidebar nav ul li {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .sidebar nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .sidebar nav ul li a:hover {
@@ -49,60 +45,27 @@ body {
 }
 
 .sidebar .contact button {
-    display: block;
-    margin: 10px 0;
     background-color: #008CBA;
     color: white;
     border: none;
     padding: 10px;
-    cursor: pointer;
+    margin-bottom: 10px;
     width: 100%;
+    cursor: pointer;
 }
 
 .sidebar .contact button:hover {
     background-color: #005f75;
 }
 
-.sidebar .footer {
+.sidebar .footer p {
     margin-top: 20px;
 }
 
+/* コンテンツエリア */
 .content {
-    margin-left: 270px; /* サイドバーの幅に合わせてマージンを設定 */
+    margin-left: 270px; /* サイドバーの幅を避けるためのマージン */
     padding: 20px;
-    background-color: #f4f4f4; /* 背景色を薄いグレーに */
-}
-
-.header-image img {
-    width: 100%; /* コンテンツの幅に合わせて表示 */
-    height: auto; /* アスペクト比を保持 */
-}
-
-.news {
-    margin-top: 20px;
-}
-
-.news h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.news-item {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.news-item img {
-    width: 200px;
-    height: auto;
-    margin-right: 20px;
-}
-
-.news-item p {
-    flex-grow: 1;
-}
-
-p {
-    font-size: 16px;
-    color: #333;
+    background-color: #f4f4f4;
+    height: 100vh; /* 画面全体の高さに合わせる */
 }
