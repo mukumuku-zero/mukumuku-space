@@ -122,11 +122,12 @@ body {
 .news-item {
     display: flex;
     margin-bottom: 20px;
+    height: 200px; /* カードの高さを固定 */
 }
 
 .news-item img {
     width: 200px;
-    height: 150px;  /* 高さを自動調整 */
+    height: auto;  /* 高さを自動調整 */
     object-fit: cover;  /* アスペクト比を維持しつつ、要素全体に画像を収める */
     margin-right: 20px;
 }
