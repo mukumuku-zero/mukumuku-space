@@ -80,7 +80,7 @@ body {
 .slider {
     position: relative;
     width: 100%;
-    height: 350px; /* 必要に応じて高さを調整 */
+    height: 400px; /* 必要に応じて高さを調整 */
     overflow: hidden; /* 画像がはみ出ないように隠す */
 }
 
