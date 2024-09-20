@@ -15,7 +15,7 @@ body {
     width: 250px;
     background-color: #000;
     color: white;
-    height: 100vh; /* 画面全体の高さに固定 */
+    height: 100vh; /* サイドバーを画面全体の高さに */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -68,15 +68,14 @@ body {
 }
 
 .content {
-    margin-left: 270px; /* サイドバーの幅に合わせてマージンを調整 */
+    margin-left: 270px; /* サイドバーの幅に合わせてマージンを設定 */
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* 背景色を薄いグレーに */
 }
 
 .header-image img {
     width: 100%; /* コンテンツの幅に合わせて表示 */
     height: auto; /* アスペクト比を保持 */
-    max-width: 100%; /* 画像がはみ出さないように調整 */
 }
 
 .news {
