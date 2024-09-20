@@ -1,27 +1,27 @@
-/* ページ全体のスタイルをリセット */
+/* CSSリセット */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ボディ */
 body {
-    font-family: 'Arial', sans-serif;
-    display: flex; /* Flexboxでレイアウトを調整 */
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
 }
 
-/* 左側固定のサイドバー */
+/* サイドバー */
 .sidebar {
     width: 250px;
-    height: 100vh; /* ビューポートの高さを100% */
-    background-color: #000; /* 背景を黒に */
-    color: white; /* テキストカラーを白に */
+    height: 100vh;
+    background-color: #000;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* スペースを均等に配置 */
+    justify-content: space-between;
     padding: 20px;
-    position: fixed; /* 固定表示 */
+    position: fixed;
     left: 0;
     top: 0;
 }
@@ -33,11 +33,10 @@ body {
 
 .sidebar nav ul {
     list-style: none;
-    padding: 0;
 }
 
 .sidebar nav ul li {
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
 
 .sidebar nav ul li a {
@@ -50,28 +49,94 @@ body {
     text-decoration: underline;
 }
 
-.sidebar .contact button {
+.contact button {
     background-color: #008CBA;
     color: white;
     border: none;
     padding: 10px;
     margin-bottom: 10px;
-    width: 100%;
     cursor: pointer;
+    width: 100%;
 }
 
-.sidebar .contact button:hover {
+.contact button:hover {
     background-color: #005f75;
 }
 
-.sidebar .footer p {
+.footer {
     margin-top: 20px;
+    color: white;
 }
 
 /* コンテンツエリア */
 .content {
-    margin-left: 270px; /* サイドバーの幅を避けるためのマージン */
+    margin-left: 270px;
     padding: 20px;
     background-color: #f4f4f4;
-    height: 100vh; /* 画面全体の高さに合わせる */
+    width: calc(100% - 270px);
+}
+
+/* 画像スライダー */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+}
+
+.slider-caption h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.slider-caption p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* ニュースセクション */
+.news-section {
+    margin-top: 40px;
+}
+
+.news-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.news-item img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.news-item p {
+    flex-grow: 1;
+}
+
+.news-item span {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
 }
